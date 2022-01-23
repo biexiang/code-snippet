@@ -1,5 +1,7 @@
 package no_lock
 
+// no_lock指不用锁
+
 type RingBuffer struct {
 	Queue      []interface{}
 	Head, Tail uint64
@@ -55,17 +57,3 @@ func (c *RingBuffer) IsEmpty() bool {
 func (c *RingBuffer) IsFull() bool {
 	return c.Tail-c.Head == c.Cap-1 || c.Head-c.Tail == 1
 }
-
-//func (c *RingBuffer) Front() interface{} {
-//	if c.IsEmpty() {
-//		return nil
-//	}
-//	return c.queue[c.head]
-//}
-//
-//func (c *RingBuffer) Rear() interface{} {
-//	if c.IsEmpty() {
-//		return nil
-//	}
-//	return c.queue[c.tail]
-//}

@@ -1,4 +1,4 @@
-package lock_free
+package lock_free_1
 
 import (
 	"sync/atomic"
