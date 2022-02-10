@@ -1,4 +1,4 @@
-package escape_analysis
+package bench
 
 import "testing"
 
