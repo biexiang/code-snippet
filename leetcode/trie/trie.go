@@ -40,6 +40,5 @@ func (t *Trie) Search(word string) bool {
 }
 
 func (t *Trie) StartsWith(prefix string) bool {
-	lastRune := t.search(prefix)
-	return lastRune != nil && lastRune.isEnd == false
+	return t.search(prefix) != nil
 }
